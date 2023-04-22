@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Result Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="table-users">
+   <div class="header"><center><h1>First Five Video Data(PW Foundation)</h1></center></div>
+   <br>
+   <br>
+   <table cellspacing="0" border="1",frame='void', rules='rows'> 
+      <h1>
+      {% for table in tables %}
+                    <h2><center>{{titles[loop.index]}}</center></h2>                            
+                    {{ table|safe }}
+                    {% endfor %}  
+      </h1>
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
